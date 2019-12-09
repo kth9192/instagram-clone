@@ -38,13 +38,14 @@ const AppTabContainet = createAppContainer(AppTabNavigator);
 
 class MainScreen extends Component {
   static navigationOptions = {
-    headerLeft: <Icon name="ios-camera" style={{ paddingLeft: 10 }} />,
-    headerTitle: (
-      <View style={{ flex: 1, alignItems: "center" }}>
-        <Text style={{ fontWeight: "bold" }}>Instagram</Text>
-      </View>
-    ),
-    headerRight: <Icon name="ios-send" style={{ paddingRight: 10 }} />
+    header: null
+    // headerLeft: <Icon name="ios-camera" style={{ paddingLeft: 10 }} />,
+    // headerTitle: (
+    //   <View style={{ flex: 1, alignItems: "center" }}>
+    //     <Text style={{ fontWeight: "bold" }}>Instagram</Text>
+    //   </View>
+    // ),
+    // headerRight: <Icon name="ios-send" style={{ paddingRight: 10 }} />
   };
 
   render() {

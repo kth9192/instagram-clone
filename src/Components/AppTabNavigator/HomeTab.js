@@ -1,6 +1,15 @@
 import React, { Component } from "react";
 import { View, Text, StyleSheet, ScrollView } from "react-native";
-import { Container, Content, Icon, Thumbnail } from "native-base";
+import {
+  Container,
+  Content,
+  Icon,
+  Thumbnail,
+  Header,
+  Left,
+  Right,
+  Body
+} from "native-base";
 import CardComponent from "../CardComponent";
 
 class HomeTab extends Component {
@@ -23,7 +32,7 @@ class HomeTab extends Component {
       params: [
         "database_api",
         "get_discussions_by_created",
-        [{ tag: "kr", limit: 20 }]
+        [{ tag: "kr", limit: 10 }]
       ]
     };
 
@@ -68,6 +77,17 @@ class HomeTab extends Component {
   render() {
     return (
       <Container style={styles.container}>
+        <Header style={styles.header}>
+          <Left>
+            <Icon name="ios-camera" style={{ paddingStart: 10 }} />
+          </Left>
+          <Body style={{ flex: 1, alignItems: "center" }}>
+            <Text style={{ fontWeight: "bold" }}>Instagram</Text>
+          </Body>
+          <Right>
+            <Icon name="ios-send" style={{ paddingEnd: 10 }} />
+          </Right>
+        </Header>
         <Content>
           <View style={{ height: 100 }}>
             <View style={styles.storyHeader}>
@@ -115,6 +135,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center"
   },
+  header: { width: "100%", backgroundColor: "#fff" },
   storyHeader: {
     flex: 1,
     flexDirection: "row",
